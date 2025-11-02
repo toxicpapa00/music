@@ -28,6 +28,7 @@ from strings import get_string
 @LanguageStart
 async def start_pm(client, message: Message, _):
     await add_served_user(message.from_user.id)
+    await message.react("🍓")
     
     # Typing effect part
     typing_message = await message.reply("<b>𝖣ɪɴɢ..𝖣ᴏɴɢ..❤️‍🔥</b>")  # Initial message
@@ -194,4 +195,5 @@ async def welcome(client, message: Message):
                 await message.stop_propagation()
         except Exception as ex:
             print(ex)
+
 
